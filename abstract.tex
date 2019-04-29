@@ -16,78 +16,70 @@
 \ead{mariadelaluz.morales489@comunidadunir.net}
 
 \begin{abstract}
-Goveramental open data portals make a huge effort to collect data and offer it free to their citiziens.
-However, this data is often wasted, since it is not always in an accesible, relevant and compelling format
-for the averange citizien.
-We created a complete system, which collects the data periodically, store it to be able to consult the historical records,
-process it to extract the relevant information, personalize it to engadge the users with its importance in each individual
-case, visualize it in a format everybody can understand and provide it online to facilitate its accesibility. Furthermore,
-descriptions all the data and how it has been processed are also provided to raise the awareness about the value
-of the usage of this data. This webtool is Aire Guru and has been sucesfully tested, using the Air Quality data provided
-by the Málaga open data portal\footnote{\url{https://datosabiertos.malaga.eu/}} in the city of Málaga.
+Government open data portals make a huge effort to collect data and make it available to their citizens.
+However, this data is often wasted, since it is not always in effectively accessible, relevant and compelling
+for the average citizen.
 
+Urban residents are surrounded by many sources of air pollution, and it is the direct cause of many different symptoms, ranging from simple eye irritation 
+to, in extreme cases, death. Particularly for high-risk groups like children and the elderly.
+The WHO (World Health Organization) estimates 4.2 million deaths
+\footnote{\url{https://www.who.int/airpollution/ambient/en/}} per year due to air pollution.
+Air pollution has a significant affect on people with asthma, cardiopathies, allergies, and neurological pathologies.
 
-Nowadays we are surrounded by many sources of pollution which contaminates the air, the air 
-which we breath. This contamination is the cause of many and different symptoms, from a simple eye irritation 
-to an extreme case, the death. Specially for the sensitive groups like children and elders.
-The WHO (World Health Organization) estimates a 4.2 million deaths
-\footnote{\url{https://www.who.int/airpollution/ambient/en/}} per year due the air pollution.
-The list is very large, the air pollution affect to people with asthma, cardiopathies, allergies,
-long cancer, EPOC, leukemia, pneumonia, autism, neurologic pathologies,etc.
-It does not only aggravate the symptoms but it even can be the cause of it, like the case of brain
+Air pollution not only aggravates existing diseases, but can also be an initial cause of them, such as in the case of foetal brain
 damage\footnote{\url{https://www.cronicabalear.es/2018/07/la-contaminacion-ambiental-causa-
 enfermedades-neurologicas-y-envejecimiento-del-cerebro/}} 
-in the newborns caused by the air pollution consumed by the mother.
+caused by the mother's exposure to air pollution.
 
-To be able to control the level of exposure to the air pollution, we need to know what are these levels
-in the different areas where we frecuently are and the variation during the different slots.
-To make this information as accessible as possible, it should be open to everybody and the format the levels
-are shown, should be simple and complete to be understandible for the averange people.
+To be able to control the level of exposure we need to know the levels
+in the specific locations that we frequent, and the variation during specific times.
+To make this information as accessible as possible, it should be freely and publicly available, and the presentation
+must be simple enough to be understandable by the average citizen.
 
-There are already many tools available, however, they do not succeed to answer these questions.
+We have created a tool - Aire Guru - which collects air pollution data periodically, stores it for historical use, 
+processes it to extract relevant information, personalizes it to engage the user with regard to their individual
+circumstance, visualizes it in an easy to understand format, and provides it online to facilitate its accessibility. Furthermore,
+descriptions of all the data and how it has been processed are also provided to raise public awareness of the value
+of this data. Aire Guru has been successfully tested, using the Air Quality data provided
+by the Málaga open data portal\footnote{\url{https://datosabiertos.malaga.eu/}} in the Spanish city of Málaga.
+
+There are already many tools available, however they have various failings.
+
 The most common problems are:
 
 \begin{itemize}
-\item Obsolete measurements. The measures need to be taken periodically, since it could be a huge difference
-between different moments of the day. Otherways, it will not be relevant.
-\item Too few measurements. A city which offer only few measure is not compelling for the users.
-\item Considering a measurement for a huge area. A measurement should represent the measure of an 
-specific area, one single measurement for an entired city is not a valid or relevant measurement.
-\item Bad representation of the information. The information is represented on a table, making really dificult
-to locate the measurement in a map, others is represented in a really specific format, no understandible for the averange user.
-This result in a no compelling visualization.
-\item Insufficient information. Tools which show one single value as a number or a color. This information is not
-enough for the user to have the control to the situation. This visualizations are not really compelling. 
+
+\item Obsolete measurements. Measurements need to be taken regularly, since there can be huge differences
+between pollution levels at different times of the day.
+
+\item Limited geographic coverage. The data must cover a reasonable proportion of areas that people spend significant time in.
+
+\item Insufficiently granular measurements. Measurements must be at a reasonably fine level of granularity. One single measurement for an entire city is not useful.
+
+\item Poor presentation. Often the information is presented in an uninterpreted form, making it difficult for users to visualize, especially in a geographic sense.
+
+\item Poor discrimination and interpretation. Many tools show individual values as a number or a colour. This information is not
+enough for the user to take control of their exposure. Such visualizations are not really compelling. 
+
 \end{itemize}
 
-Our webtool, Aire Guru \footnote{\url{https://airquality.guru/}}, solves the current deficiencies. 
+Our webtool \footnote{\url{https://airquality.guru/}}, solves the deficiencies described above.
 
-Collects and process the data. This data is published hourly and it comes from the measurement stations placed along the 
-city of Málaga, covering its entired extension divided by areas of $100m^2$.
-Even if the data is completed and updated, a collection of measurements does not mean anything if it is not processed, 
-only after this step, it will be possible to extract the relevant information. In the context of air pollution, the information 
-is represented by the AQI (Air Quality Index). 
+Measurements are published hourly and come from measurement stations placed throughout the 
+city of Málaga, covering entire urban region at a granularity of $100m^2$
 
-Aire Guru represents the information in a simple and clear way. Making possible to spot the most dangerous places 
-and allowing us to make comparisons. Furthermore, it has personalized information, like the most relevant pollutants for our
-health in the case of a medical condition and the pollution we are exposed to on real time and the past. 
-This last feature, monitor and control the pollution we are exposed on an individual level, is possible if we record periodically the
-pollution we are exposed to. More personalized, more compelling.
+The information is presented in a clear and simple manner, making it possible to see the most polluted regions,
+and allowing the user to make comparisons both geographically and historically. It provides personalised information, such as the most relevant pollutants for a user's particular medical conditions, and can track
+the pollution they are exposed to both in real time and over a historical period, by linking with location data from their mobile device. 
 
-Thanks to its periodicity and granularity, it facilitates us the calculation of the exposure of the different pollutants in an 
-individual level. This implementation avoids costs for the final user which does not need to carry a measurement station with them. 
-Furthermore, it adds more value to the data.
-
-Aire Guru is available online free of charged, on a legible format, bringint it closer to the final user and provides the all 
-information to help the final user to understand the air pollution, sources, consecuencies and how is calculated. Hence, the data 
-is fully accesible to the users.
-
-It has been sucessfully tested with 14 subject in the Spanish city of Málaga. The survey shows a high satisfaction on its usage.
-The information is clear and complete.More than the half of the subjects did not know how the air quality was measure and how it 
-could affect to their health, they learned it using the webtool and four of the subjects discovered that they have a medical 
-condition which can be affected by the air pollution. Aire Guru raised the awareness on the test subjects.
+The system has been successfully tested with 14 subject in the Spanish city of Málaga. The survey showed a high degree of satisfaction, particularly regarding the clarity and completeness of the the information and analysis.
+More than the half of the subjects were not aware of how air quality is measured and how it 
+can affect their health. Four of the subjects discovered that they have a medical 
+condition which can be affected by air pollution.
     
+Aire Guru is available online, free of charge.
 \end{abstract}
+
 
 \begin{keyword}
 Air Quality Index \sep Pollution \sep Monitoring \sep Visualization \sep Analysis 
@@ -96,3 +88,4 @@ Air Quality Index \sep Pollution \sep Monitoring \sep Visualization \sep Analysi
 \end{frontmatter}
 
 \end{document}
+  
